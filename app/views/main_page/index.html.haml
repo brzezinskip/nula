@@ -1,11 +1,12 @@
--@songs.each do |song|
-  .songs-boxes.col-lg-3.col-md-6
-    .panel.panel-primary
-      .panel-heading
-      %a{href: song.youtube_url}
-        .panel-footer
-          %span.pull-left=song.title
-          %span.pull-right
-          .clearfix
+.songs
+  -@songs.each do |song|
+    .songs-boxes.col-lg-3.col-md-6
+      .panel.panel-primary
+        .panel-heading
+        %a{href: song.youtube_url}
+          .panel-footer
+            %span.pull-left=song.title
+            %span.pull-right
+            .clearfix
 .digg_pagination.col-md-12
   =will_paginate @songs
