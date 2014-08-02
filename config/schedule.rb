@@ -19,5 +19,5 @@
 
 # Learn more: http://github.com/javan/whenever
 every 10.minutes do
-  runner "MainPage.index"
+  runner "Song.fetch_youtube"
 end
