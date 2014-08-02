@@ -24,7 +24,7 @@ class FetchXml
     get_songs.each do |author|
       authors_list.push(author.sub(/\s-\s.*/, ''))
     end
-    puts authors_list
+    authors_list
   end
 
   def get_titles
@@ -32,7 +32,7 @@ class FetchXml
     get_songs.each do |title|
       titles_list.push(title.sub(/.*\s-\s/, ''))
     end
-    puts titles_list
+    titles_list
   end
 
 end
