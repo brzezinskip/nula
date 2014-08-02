@@ -59,7 +59,15 @@ class FetchXml
         titles_list.push("Not found on youtube")
       end
     end
-    urls_list.zip titles_list
+    thumbnails_list = []
+    videos_list.each do |thumbnail|
+      unless thumbnail.videos.count == 0
+        thumbnails_list.push(thumbnail.videos.first.thumbnails.fifth.url)
+      else
+        thumbnails_list.push("Image not found")
+      end
+    end
+    urls_list.zip titles_list, thumbnails_list
   end
 
 end

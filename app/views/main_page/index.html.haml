@@ -2,7 +2,7 @@
   -@songs.each do |song|
     .songs-boxes.col-lg-3.col-md-6
       .panel.panel-primary
-        .panel-heading
+        .panel-heading{style: "background-image: url(#{song.cover_url})"}
         %a{href: song.youtube_url}
           .panel-footer
             %span.pull-left=song.title
