@@ -1,6 +1,6 @@
 class Song < ActiveRecord::Base
 
   belongs_to :playlist
-  validates_presence_of :title, :author, :youtube_url, :cover_url
+  validates_presence_of :title, :youtube_url
 
 end

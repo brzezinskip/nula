@@ -1,8 +1,7 @@
 class FetchXml
 
-  def notify
-    get_authors
-    get_titles
+  def yt_urls
+    youtube_urls
   end
 
   private
@@ -33,6 +32,34 @@ class FetchXml
       titles_list.push(title.sub(/.*\s-\s/, ''))
     end
     titles_list
+  end
+
+  def youtube_client
+    client = YouTubeIt::Client.new(dev_key: "AIzaSyBb37FdGRmySFAQZ2aH06bysPQfwBYiBiw")
+  end
+
+  def youtube_urls
+    videos_list = []
+    get_songs.each do |song|
+      videos_list.push(youtube_client.videos_by(query: song, per_page: 5))
+    end
+    urls_list = []
+    videos_list.each do |url|
+      unless url.videos.count == 0
+        urls_list.push(url.videos.first.player_url)
+      else
+        urls_list.push("Not found on youtube")
+      end
+    end
+    titles_list = []
+    videos_list.each do |url|
+      unless url.videos.count == 0
+        titles_list.push(url.videos.first.title)
+      else
+        titles_list.push("Not found on youtube")
+      end
+    end
+    urls_list.zip titles_list
   end
 
 end
