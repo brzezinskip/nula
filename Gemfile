@@ -22,6 +22,7 @@ gem 'font-awesome-rails'
 gem 'youtube_it'
 gem 'pry'
 gem 'will_paginate'
+gem 'whenever'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
