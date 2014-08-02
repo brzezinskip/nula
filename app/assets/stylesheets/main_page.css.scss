@@ -9,6 +9,12 @@ body {
   overflow-y: scroll;
   padding-top: 100px;
   background-color: #18bc9c;
+  .songs {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+    overflow: auto;
+  }
   .panel-primary > .panel-heading {
     height: 180px;
     background-position: center;
