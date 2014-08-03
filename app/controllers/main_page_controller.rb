@@ -8,7 +8,7 @@ class MainPageController < ApplicationController
         Song.create(title: song[1], youtube_url: song[0], cover_url: song[2] )
       end
     end
-    @songs = Song.paginate(page: params[:page], per_page: 8).order('created_at DESC')
+    @songs = Song.paginate(page: params[:page], per_page: 12).order('created_at DESC')
   end
 
 end
