@@ -8,5 +8,11 @@
             %span.pull-left=song.title
             %span.pull-right
             .clearfix
-.digg_pagination.col-md-12
+#myModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", role: "dialog", tabindex: "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
+      .modal-body
+        %iframe{allowfullscreen: "", frameborder: "0", height: "300", width: "400"}
   =will_paginate @songs
