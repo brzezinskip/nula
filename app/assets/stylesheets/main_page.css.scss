@@ -12,8 +12,7 @@ body {
   .songs {
     width: 100%;
     margin: 0 auto;
-    padding: 20px 0;
-    overflow: auto;
+    overflow: scroll;
   }
   .panel-primary > .panel-heading {
     height: 180px;
@@ -138,6 +137,7 @@ section {
   background-color: white;
   margin-top: -10px;
   bottom: 0;
+  margin-bottom: 150px;
 }
 
 footer {
