@@ -18,6 +18,6 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
-every 1.minutes do
-  runner "Song.fetch_youtube"
+every 1.minute do
+  runner "Song.youtube_fetch"
 end
